@@ -1,0 +1,172 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+
+navbar {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+	padding: 10px 9%;
+	background: linear-gradient(245.59deg, #460020 28.53%, #15003D 75.52%);
+}
+.logo{
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'marck script';
+	color: white;	
+}
+.navlist{
+	display: flex;
+}
+.navlist a{
+	color: white;
+	margin-left: 60px;
+	font-size: 15px;
+	font-weight: 400;
+	border-bottom: 2px solid transparent;
+	transition: all .55s ease;
+} 
+.navlist a:hover{
+	border-bottom: 2px solid #FF6622;
+}
+#menu-icon{
+	color: white;
+	font-size: 35px;
+	z-index: 10001;
+	cursor: pointer;
+	display: none;
+}
+.back{
+	position:absolute;
+	top: 15%;
+	left: 5%;
+	margin-top: 40px;
+}
+.back i{
+	display: block;
+	padding: 0px;
+	font-size: 45px;
+	color: #15003D;
+	background: transparent;
+	border-radius: 50px;
+	transition: all .50s ease;
+}
+.back i:hover{
+	background-color: #FF6622;
+	border: 0;
+	color: white;
+	transform: translateY(-5px);
+}
+section {
+	margin-top: 150px;
+	padding: 0 19%;
+}
+body {
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+}
+.main h1{
+	font-size: 55px;
+	font-family:'';
+	line-height: 1;
+	color: #15003D;
+	margin: 0 0 10px;
+}
+.main h2{
+	font-size: 15px;
+	font-weight: 400;
+	color: #15003D;
+	margin-bottom: 20px;
+}
+.main h3{
+	font-size: 25px;
+	font-weight: 400;
+	color: #15003D;
+	margin-bottom: 20px;
+}
+body {font-family: 'poppins', sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: #15003D;
+  padding: 12px 20px;
+  border: 2px solid #15003D;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #ff6622;
+	color: white;
+	border: none;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+/* end of contact */
+
+
+/* footer */
+footer {
+	position:relative;
+	background: white;
+	margin-top: 50px;
+}
+.footercontainer{
+	width: auto;
+	padding: 15px;
+	background:linear-gradient(245.59deg, #460020 28.53%, #15003D 75.52%);
+}
+.thanks{
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'marck script';
+	color: white;
+	text-align: center;
+}
+.socialicons{
+	display: block;
+	padding-right: 0;
+	font-size: 25px;
+	text-align: center;
+}
+.socialicons i{
+	display:contents;
+	color: white;
+}
+.footerbottom{
+	text-align: center;
+	padding: 20px 0px 30px 0px;
+	background: #15003D;
+}
+.footerbottom p{
+	color: white;
+	font-family: poppins;
+	font-weight: 500;
+}
+/* end of footer */

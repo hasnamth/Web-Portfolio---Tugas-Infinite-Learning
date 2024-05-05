@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Portfolio - Web Portfolio</title>
+	
+	<!---custom css link--->
+	<link rel="stylesheet" type="text/css" href="portfolio.css">
+	
+	<!---boxicons link--->
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	
+	<!---remixicons link--->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+	
+	<!---google fonts link--->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Marck+Script&family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>		
+	
+<!-- navigation bar -->
+<navbar>
+  <a href="#" class="logo">Hasnamth.</a>
+  <ul class="navlist">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="bx bx-menu" id="menu-icon"></div>
+</navbar>
+<!-- end of navigation bar -->
+
+<!-- portfolio -->
+	<div class="back">
+		<a href="home.html"><i class="ri-arrow-left-circle-line"></i></a>
+	</div>
+
+<section class="portfolio">
+	<div class="main">
+		<h1>Portfolio</h1>
+		<hr>
+		<h2>Let's explore some of my previous projects!</h2>
+
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('design')"> Design</button>
+    <button class="btn" onclick="filterSelection('illustration')"> Illustration</button>
+    <button class="btn" onclick="filterSelection('photography')"> Photography</button>
+  </div>
+
+<!-- Portfolio Gallery Grid -->
+  <div class="row">
+   <div class="column design">
+    <div class="content">
+      <img src="assets/signsystem.png" alt="signsystem" style="width:100%">
+      <h4>Geology Museum Sign System</h4>
+      <p>The shape of this sign was adapted from the shape of stones in prehistoric times to suit the concept of the geology museum. </p>
+    </div>
+   </div>
+  <div class="column design">
+    <div class="content">
+    <img src="assets/desain.isipiringku.png" alt="lunchbox" style="width:100%">
+      <h4>Lunch Box Design: Isi Piringku</h4>
+      <p>Derived from a sense of empathy for the many cases of malnutrition and obesity, this lunch box design can help adjust the recommended food portions according to needs.</p>
+    </div>
+  </div>
+  <div class="column design">
+    <div class="content">
+    <img src="assets/Kujang_Font.jpg" alt="kujangfont" style="width:100%">
+      <h4>Kujang Font</h4>
+      <p>The shape of the letters is adapted from the traditional weapon typical of West Java, Kujang.</p>
+    </div>
+  </div>
+
+  <div class="column illustration">
+    <div class="content">
+      <img src="assets/Merak Ingin Terbang Lebih Tinggi.png" alt="peacock" style="width:100%">
+      <h4>The peacock wants to fly higher</h4>
+      <p>When the fear of being left behind makes us forget the true beauty of ourselves.</p>
+    </div>
+  </div>
+  <div class="column illustration">
+    <div class="content">
+    <img src="assets/The light.jpg" alt="Light" style="width:100%">
+      <h4>The Light</h4>
+      <p>When you follow the light, everything will feel warm.</p>
+    </div>
+  </div>
+  <div class="column illustration">
+    <div class="content">
+    <img src="assets/Tentang Waktu.png" alt="Time" style="width:100%">
+      <h4>About Time</h4>
+      <p>Everything has their own time</p>
+    </div>
+  </div>
+
+  <div class="column photography">
+    <div class="content">
+    <img src="assets/Menjemput Harapan.png" alt="Car" style="width:100%">
+      <h4>Menjemput Harapan</h4>
+      <p>When the sun rises, that is the best time for us to pick up new hopes.</p>
+    </div>
+  </div><div class="column photography">
+    <div class="content">
+      <img src="assets/IMG_6453.JPG" alt="graduation" style="width:100%">
+      <h4>UPI Graduation</h4>
+      <p>Photo project with team from dikenang.photo</p>
+    </div>
+  </div>
+  <div class="column photography">
+    <div class="content">
+    <img src="assets/Monkey (2).jpg" alt="Monkey" style="width:100%">
+      <h4>Monkey</h4>
+      <p>This photo taken in Taman Hutan Raya Bandung</p>
+    </div>
+  </div>
+<!-- End Portfolio Gallery Grid -->
+
+<!-- Filter Script -->
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<!-- Filter Script -->
+  </div>
+  </div>
+</section>
+<!-- end of portfolio -->
+
+<!-- footer -->
+<footer>
+	<div class="footercontainer">
+		<h4 class="thanks">Thanks for coming!</h4>
+		<div class="socialicons">
+			<a href="https://www.instagram.com/hasnamth/"><i class="ri-instagram-fill"></i></a>
+			<a href="https://www.behance.net/hasnamth"><i class="ri-behance-fill"></i></a>
+			<a href="mailto:hasnamth.acc@gmail.com"><i class="ri-mail-fill"></i></i></a>
+			<a href="https://www.linkedin.com/in/"><i class="linkedin-box-fill"></i></a>
+		</div>
+	</div>
+	
+	<div class="footerbottom">
+		<p>Copyright &copy;2023</p>
+	</div>
+	</footer>
+<!-- end of footer -->
+</body>
+</html>
